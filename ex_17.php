@@ -22,7 +22,9 @@ function maiorMenor($palavras) {
     ];
 }
 
-
+function repetidas($palavras) {
+    return array_filter(array_count_values($palavras), fn($qtd) => $qtd > 1);
+}
 
 function maisFrequentes($palavras) {
     $contagem = array_count_values($palavras);
